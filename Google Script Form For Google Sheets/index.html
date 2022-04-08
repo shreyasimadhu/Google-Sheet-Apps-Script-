@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <?!= include('JavaScript'); ?>
+</head>
+<body>
+    <div class="container">
+        <div class="card mx-auto" style="max-width:40rem;">
+            <div class="card-body">
+                <h2 class="card-title text-xl-center pb-3" style="font-family:Forte; color:#0a58ca; text-shadow:1px 1px 10px rgb(43, 255, 0);">
+                  Information Form <br>
+                  <span style="text-decoration: underline;">
+                    Create By Shereyase Madhu Shampa
+                  </span>
+                </h2>
+                <hr class="mb-3">
+                <form class="row g-3" id="myForm" onsubmit="handleFormSubmit(this)">
+
+                  <div class="col-md-6">
+                    <label for="fullname" class="form-label">Full Name :</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Your Full Name" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="phonenumber" class="form-label">Phone Number :</label>
+                    <input type="number" class="form-control" id="phonenumber" name="phonenumber" placeholder="Enter Your Phone Number" required>
+                  </div>
+
+                  <div class="col-md-6 mt-3">
+                    <label for="emailname" class="form-label">Email :</label>
+                    <input type="email" class="form-control" id="emailname" name="emailname" placeholder="Enter Your Email" required>
+                  </div>
+
+                  <div class="col-md-6 mt-3">
+                    <label for="nidnumber" class="form-label">NID No :</label>
+                    <input type="number" class="form-control" id="nidnumber" name="nidnumber" placeholder="Enter Your Email" required>
+                  </div>
+
+                  <div class="col-md-6 mt-3">
+                    <label for="dob" class="form-label">Date Of Birth :</label>
+                    <input type="date" class="form-control" id="dob" name="dob" placeholder="Enter Your Birth Date" required>
+                  </div>
+
+
+                  <div class="col-md-6 mt-3">
+                    <label for="gender" class="form-label">Gender :</label>
+                    <input type="text" class="form-control" id="gender" list="connect1" name="gender" placeholder="Select Your Gender" required>
+                    <datalist id="connect1">
+                      <option value="Male"></option>
+                      <option value="Female"></option>
+                      <option value="Other"></option>
+                    </datalist>
+                  </div>
+
+
+                  <div class="col-md-12 mt-3">
+                    <label for="brn" class="form-label">Birth Registration No :</label>
+                    <input type="number" class="form-control" id="brn" name="brn" placeholder="Birth Registration Number" required>
+                  </div>
+
+
+                  <div class="col-md-12 my-3">
+                    <label for="eq" class="form-label">Education Qualification :</label>
+                    <input type="text" class="form-control" id="eq" list="connect2" name="eq" placeholder="Select Your Education Qualification" required>
+                    <datalist id="connect2">
+                      <option value="MSC Passed"></option>
+                      <option value="BSC Passed"></option>
+                      <option value="HSC Passed"></option>
+                      <option value="SSC Passed"></option>
+                      <option value="JSC Passed"></option>
+                      <option value="PSC Passed"></option>
+                      <option value="MSC Running"></option>
+                      <option value="BSC Running"></option>
+                      <option value="HSC Running"></option>
+                      <option value="SSC Running"></option>
+                      <option value="JSC Running"></option>
+                      <option value="PSC Running"></option>
+                    </datalist>
+                  </div>
+
+
+                  <div class="col-md-12">
+                    <label for="skills" class="form-label">Skills :</label>
+                    <input type="text" class="form-control" id="skills" list="connect3" name="skills" placeholder="Select Your Skills" required>
+                    <datalist id="connect3">
+                      <option value="Front End Developer Beginner"></option>
+                      <option value="Front End Developer Intermediate"></option>
+                      <option value="Front End Developer Expart"></option>
+                      <option value="Back End Developer Beginner"></option>
+                      <option value="Back End Developer Intermediate"></option>
+                      <option value="Back End Developer Expart"></option>
+                      <option value="Full Stack Web Developer"></option>
+                      <option value="Wordpress Beginner"></option>
+                      <option value="Wordpress Intermediate"></option>
+                      <option value="Wordpress Expart"></option>
+                      <option value="DataBase Designer Beginner"></option>
+                      <option value="DataBase Designer Intermediate"></option>
+                      <option value="DataBase Designer Expart"></option>
+                      <option value="DataBase SQL Expart"></option>
+                      <option value="Android App Developer"></option>
+                      <option value="Desktop App Developer"></option>
+                      <option value="Data-Science Beginner"></option>
+                      <option value="Data-Science Intermediate"></option>
+                      <option value="Data-Science Expart"></option>
+                      <option value="Python Developer"></option>
+                      <option value="PHP Developer"></option>
+                      <option value="Java-Script Developer"></option>
+                      <option value="Artificial Intelligence Expart"></option>
+                      <option value="Web Scraping Expart"></option>
+                      <option value="Machine Learning Expart"></option>
+                      <option value="Deep Learning Expart"></option>
+                    </datalist>
+                  </div>
+
+
+                  <div class="form-group col-md-12 mt-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Here I am consciously providing information
+                      </label>
+                    </div>
+                  </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="submit">Submit Your Information</button>
+                </form>
+                <div id="output"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<script>
+    $("#submit").click(function(){
+        var fullname = $("#fullname").val();
+        var phonenumber = $("#phonenumber").val();
+        var emailname = $("#emailname").val();
+        var nidnumber = $("#nidnumber").val();
+        var dob = $("#dob").val();
+        var gender = $("#gender").val();
+        var brn = $("#brn").val();
+        var eq = $("#eq").val();
+        var skills = $("#skills").val();
+
+        if(fullname == '' || phonenumber == '' || emailname == '' || nidnumber == '' || dob == '' || gender == '' || brn == '' || eq == '' || skills == ''){
+            swal({
+                title: "Fields Empty ",
+                text: "Please Check the missing field!",
+                icon: "warning",
+                button: "Ok",
+              });
+        }
+        else{
+            swal({
+                title: "Successfully Submited",
+                text: "Success Full Field",
+                icon: "success",
+                button: "Ok",
+              });
+        }
+    });
+  </script>
+</body>
+</html>

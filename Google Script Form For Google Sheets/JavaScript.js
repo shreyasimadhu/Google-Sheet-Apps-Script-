@@ -2,7 +2,7 @@
 
 // Ai code tuku "JavaScript" Name e JavaScript.html e save Korte Hobe App Script e
 
-      
+          
 // <script> 
         function preventFormSubmit(){
             var forms = document.querySelectorAll('form');
